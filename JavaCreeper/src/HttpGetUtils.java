@@ -34,5 +34,6 @@ public class HttpGetUtils {
                 continue;
             AllLinks.getAllLinks(link.attr("abs:href"));
         }
+        System.out.println(AllLinks.map.size());
     }
 }
