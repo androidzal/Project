@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    主界面控件内容
+    -->
+    <string name="main_button_food">食材</string>
+    <string name="main_button_recipe">食谱</string>
+    <string name="main_button_note">笔记</string>
+    <string name="main_button_person">个人</string>
+
+    <!--
+    食材界面控件内容
+    -->
+    <string name="foodmain_button_information">消息</string>
+    <string name="foodmain_button_QRcode">扫一扫</string>
+
+    <string name="foodmain_textview_search">输入食材关键字</string>
+    <string name="foodmain_textview_myfood">我的食材</string>
+    <string name="foodmain_textview_recommend">推荐菜谱</string>
+
+    <!--
+    菜单内容
+    -->
+    <string name="menu_food_edit_add">添加</string>
+    <string name="menu_food_edit_edit">编辑</string>
+
+    <!--
+    菜谱界面控件内容
+    -->
+    <string name="recipemain_button_information">消息</string>
+    <string name="recipemain_button_QRcode">扫一扫</string>
+
+    <string name="recipemain_textview_search">点击搜索食材菜谱信息</string>
+
+    <!--
+    笔记界面控件内容
+    -->
+    <string name="notemain_title">笔记</string>
+
+    <string name="notemain_button_information">消息</string>
+
+    <!--
+    个人界面控件内容
+    -->
+    <string name="person_button_login">登陆</string>
+    <string name="person_button_register">注册</string>
+    <string name="person_button_setting">应用设置</string>
+
+    <string name="person_textview_notlogin">您还没有登录，请先登陆</string>
+
+    <!--
+    程序设置
+    -->
+    <string name="exit_routine">再次点击退出程序</string>
+
+    <string name="db_name">/data/data/com.fjnu.edu.helper/databases/helper.db</string>
+    <string name="db_path">/data/data/com.fjnu.edu.helper/databases</string>
+
+    <!--
+    添加食材界面控件内容
+    -->
+    <string name="addfood_title">添加食材</string>
+
+    <string name="addfood_searchview_hint">输入食材关键字</string>
+
+    <string name="addfood_dialog_confirm">添加</string>
+    <string name="addfood_dialog_cancel">取消</string>
+
+    <string name="addfood_hint_input">输入添加的数量</string>
+    
+    <string name="addfood_textview_inadequacy">该食材不适合这种保存方式</string>
+    <string name="addfood_textview_storage">该方式，可保存天数：</string>
+
+    <!--
+    食材存放处
+    -->
+    <string-array name="storage_position">
+        <item>常温保存</item>
+        <item>冷藏保存</item>
+        <item>冷冻保存</item>
+    </string-array>
+
+    <!--
+    食材管理计量单位
+    -->
+    <string-array name="measurement_unit">
+        <item>个</item>
+        <item>只</item>
+        <item>克</item>
+        <item>千克</item>
+        <item>毫升</item>
+        <item>升</item>
+    </string-array>
+
+
+</resources>
