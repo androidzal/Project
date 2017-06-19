@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fjnu.edu.helper.view.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_menu"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:my="http://schemas.android.com/apk/res/com.fjnu.edu.helper"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    my:rightPadding="50dp" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_person" />
+        <include layout="@layout/layout_main"/>
+    </LinearLayout>
+
+</com.fjnu.edu.helper.view.SlidingMenu>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fjnu.edu.helper.activity.RecipeDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/recipemain_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/recipedetail_button_back"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@null"
+            android:src="@drawable/back_android"/>
+
+        <ImageButton
+            android:id="@+id/recipedetail_button_other"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/recipedetail_textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/recipedetail_button_other"
+            android:layout_toRightOf="@+id/recipedetail_button_back"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/recipedetail_imageview_image"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_toRightOf="@+id/recipedetail_imageview_image"
+            android:id="@+id/recipedetial_textview_simpleinfo"
+            android:textSize="16dp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recipedetail_textview_introduction"
+                android:textSize="17dp"
+                android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipedetail_textview_introduction"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recipedetail_textview_material"
+                android:textSize="17dp"
+                android:textColor="@color/black"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipedetail_listview_material"
+        android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recipedetail_textview_step"
+                android:textSize="17dp"
+                android:textColor="@color/black"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipedetail_listview_steps"
+        android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recipedetail_textview_remark"
+                android:textSize="17dp"
+                android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipedetail_textview_remark"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
