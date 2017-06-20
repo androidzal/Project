@@ -20,6 +20,7 @@ import com.fjnu.edu.helper.activity.RecipeActivity;
 import com.fjnu.edu.helper.activity.RecipeDetailActivity;
 import com.fjnu.edu.helper.adapter.RecipeListAdapter;
 import com.fjnu.edu.helper.adapter.RecommendRecipeGridAdapter;
+import com.fjnu.edu.helper.datebase.DBManager;
 import com.fjnu.edu.helper.message.Client;
 import com.fjnu.edu.helper.message.Json;
 import com.fjnu.edu.helper.message.MyMessage;
@@ -47,6 +48,8 @@ public class RecipeMainFragment extends Fragment implements View.OnClickListener
     private ArrayList<Bitmap>bitmaps;
     private RecommendRecipeGridAdapter myadapter;
 
+    private DBManager mgr;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
@@ -61,6 +64,7 @@ public class RecipeMainFragment extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_recipe_main, container, false);
+        mgr=new DBManager(context);
         findview();
         initview();
         return view;
@@ -107,9 +111,10 @@ public class RecipeMainFragment extends Fragment implements View.OnClickListener
 
     class SearchRecipeThread implements Runnable {
         public void run() {
+            ArrayList<String> ids = mgr.QueryHistory();
             MyMessage msg = new MyMessage();
             msg.sethead(Client.QUERY_MANY);
-            msg.setdetail(Json.ArraytoJson(Commonality.recommend(new String[] {""},15)));
+            msg.setdetail(Json.ArraytoJson(Commonality.recommend(ids,15)));
             String JsonStr = Json.ObjecttoJson(msg);
             try {
                 Socket socket = new Socket(getString(R.string.server_ip), getResources().getInteger(R.integer.server_port));

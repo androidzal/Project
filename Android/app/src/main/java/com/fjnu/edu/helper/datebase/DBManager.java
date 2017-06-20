@@ -50,9 +50,9 @@ public class DBManager {
         db.insert("myfood", null, cv);
     }
 
-    public void UpdateMyfood(MyFood food) {
+    public void UpdateMyfood(String inputdate,int quantity) {
         String sql = null;
-        sql = "update information set flag = 'T' where information_no = ";
+        sql = "update myfood set Quantity = "+quantity+" where InputDate = '"+inputdate+"'";
         db.execSQL(sql);
     }
 
@@ -103,6 +103,21 @@ public class DBManager {
         String sql = null;
         sql = "delete from myfood where InputDate = '"+date+"'";
         db.execSQL(sql);
+    }
+
+    public void InsertHistory(String id){
+        ContentValues cv = new ContentValues();
+        cv.put("id", id);
+        db.insert("history", null, cv);
+    }
+    public ArrayList<String> QueryHistory(){
+        ArrayList<String> list = new ArrayList<String>();
+        String sql="select * from history limit 15";
+        Cursor c = db.rawQuery(sql,null);
+        while (c.moveToNext()){
+            list.add(c.getString(c.getColumnIndex("id")));
+        }
+        return list;
     }
 
     public void update(String table, ContentValues value, String where, String[] args) {

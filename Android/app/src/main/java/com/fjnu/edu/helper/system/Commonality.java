@@ -12,6 +12,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -60,10 +61,13 @@ public class Commonality {
         return bitmap;
     }
 
-    public static String[] recommend(String[] id,int numbers) {
-        String items = id[0];
-        for(int i=1;i<id.length;i++){
-            items=items+"-"+id[i];
+    public static String[] recommend(ArrayList<String> id, int numbers) {
+        String items =null;
+        if(id.size()>0) {
+            items = id.get(0);
+            for (int i = 1; i < id.size(); i++) {
+                items = items + "-" + id.get(i);
+            }
         }
         try {
             String str = "http://139.199.174.96:5000/predict?item="+items+"&num="+numbers;

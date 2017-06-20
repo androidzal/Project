@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.fjnu.edu.helper.R;
 import com.fjnu.edu.helper.adapter.RecipeMaterialAdapter;
 import com.fjnu.edu.helper.adapter.RecipeStepAdapter;
+import com.fjnu.edu.helper.datebase.DBManager;
 import com.fjnu.edu.helper.message.Client;
 import com.fjnu.edu.helper.message.Json;
 import com.fjnu.edu.helper.message.MyMessage;
@@ -48,6 +49,8 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
     private ArrayList<Bitmap> bitmaps;
 
+    private DBManager mgr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +58,8 @@ public class RecipeDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         id = bundle.getString("id");
+        mgr=new DBManager(this);
+        mgr.InsertHistory(id);
         findview();
         initview();
         new Thread(new MyThread()).start();
