@@ -28,7 +28,7 @@
     - 直接在Redis使用ZRANGE命令获取相似度排序后的N个ID。
 
 ### settings.py:Redis的配置信息
-### jieba2Cut.sh:使用sed,awk去掉重复数据以及将英文引号替换为中文引号，并调用jiebaCut.py
+### dataStandard.sh:使用sed,awk去掉重复数据以及将英文引号替换为中文引号，并调用jiebaCut.py
 ### jiebaCut.py：使用jieba进行分词
 ### tests.py:测试整个引擎，可直接调用engines.py进行训练并获取到相似值
 ### train.py：调用engines.py进行训练并保存模型。
