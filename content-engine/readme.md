@@ -36,7 +36,7 @@
 
 ## 使用方式：
 - 获取源数据,并分成“id,description”两列；
-- 使用jieba2Cut.sh清洗重复数据，不良数据，并分词；
+- 使用dataStandard.sh清洗重复数据，不良数据，并分词；
 - 使用train.py进行训练模型；
 - 使用"getData.py ITEM_DATA -n NUM"获取相似节点；
 - 将sendWeb.py运行起来；
@@ -45,7 +45,7 @@
 
 ## author
 * Name:Luis
-* Email:[@Luis](1396954967@qq.com)
+* Email:[@Luis](fjnuLuis@qq.com)
 * QQ:1396954967
 * CSDN:[fjnuLuis](http://blog.csdn.net/lin_13969)
 * github:[fjnuLuis](https://github.com/fjnuLuis)
